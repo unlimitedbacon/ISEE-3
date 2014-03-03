@@ -1,10 +1,16 @@
 ISEE-3 / ICE
 ============
 
-A long-lost, pioneering spaceship—still functional thanks only to chance and human error—is coming home for the first time in three decades. It wants to explore new worlds. But we've forgotten how to talk to it.
+A long-lost, pioneering spaceship—still functional thanks only to chance and human error—is coming home for the first time in three decades. It wants to explore new worlds. But we've forgotten how to talk to it. [The obligatory XKCD.](https://xkcd.com/1337/)
 
-NSSDC/COSPAR ID: 1978-079A
-Sattelite Index #: S011004
+* NSSDC/COSPAR ID:	1978-079A
+* Sattelite Index #:	S011004
+
+[![ISEE-3 Returns](http://img.youtube.com/vi/t2YRxdpjce0/0.jpg)](http://www.youtube.com/watch?v=t2YRxdpjce0)
+
+Where do I point my satellite dish?
+-----------------------------------
+Thats what I'm trying to figure out. The scripts here are for converting the Sattelite Situation Center data to right ascension/declination. After that you can use Wolfram Alpha to get the azimuth/elevation for pointing a telescope. [This is what I've come up with so far](https://raw.github.com/unlimitedbacon/ISEE-3/master/GE.sphere-20140219-20140811.md) but I don't think its right. If you happen to live in Augusta, Georgia, then check out [this](https://raw.github.com/Sniper061/ARCA-IEEE3-ICE/master/Tipsod_ISEE-3_2014-02-18_2014-08-11_33.47N_81.975W_Augusta.txt)
 
 Articles
 --------
@@ -40,7 +46,7 @@ Technical Information
 * Microwave Filter Requirements: http://ipnpr.jpl.nasa.gov/progress_report/42-76/76K.PDF
 * DSN 70 m Subnet Telecommunications Interfaces: http://deepspace.jpl.nasa.gov/dsndocs/810-005/101/101E.pdf
 * Satellite Situation Center 4D Orbit Viewer: http://sscweb.gsfc.nasa.gov/tipsod/
-+ RE = Earth Radius
+	+ RE = Earth Radius
 * Heliocentric Trajectory Data: http://omniweb.sci.gsfc.nasa.gov/coho/helios/heli.html
 * Libration Point Missions: http://www.ieec.fcr.es/libpoint/papers/dunham.pdf
 * The Telecommunications and Data Acquisition Progress Report 42-84: http://ipnpr.jpl.nasa.gov/progress_report/42-84/84title.htm
