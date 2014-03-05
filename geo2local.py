@@ -6,6 +6,7 @@
 # Default behavior: print values based on current date/time and exit
 # Optional: specify date/time or export entire table to file
 # Graph with gnuplot
+# Specify frequency for doppler shift
 
 # GEO: Geographic coordinates
 # Z axis passes through Earth's poles
@@ -101,10 +102,11 @@ options = cli_parser.parse_args()
 # Setup
 now = datetime.datetime.utcnow()
 in_file = open(options.in_filename)
+last_distance = 0
 
 # Print header
 if options.csv:
-        print("Date, Time (UTC), Azimuth (°), Elevation (°), Distance (km)")
+        print("Date, Time (UTC), Azimuth (°), Elevation (°), Distance (km), Range Rate (km/s)")
 else:
         print("ISEE-3 / ICE Ephemeris")
         print("======================\n")
@@ -116,12 +118,13 @@ else:
         print("Ending Date:     August 11, 2014         00:00")
         print("12 minute increments")
         print("All times are UTC\n")
+	print("Range rate is average for the past 12 minutes\n")
         if options.markdown:
-                print("Date            | Time  | Azimuth (°)   | Elevation (°)       | Distance (km)")
-                print("----------------|-------|---------------|---------------------|--------------")
+                print("Date            | Time  | Azimuth (°)   | Elevation (°)         | Distance (km) | Range Rate (km/s)")
+                print("----------------|-------|---------------|-----------------------|---------------|------------------")
         else:
-                print("Date     Time (UTC)     Azimuth (°)     Elevation (°)   Distance (km)")
-                print("---------------------------------------------------------------------")
+                print("Date     Time (UTC)     Azimuth (°)     Elevation (°)   Distance (km)   Range Rate (km/s)")
+                print("-----------------------------------------------------------------------------------------")
 
 # Main Loop
 for line in in_file:
@@ -137,11 +140,18 @@ for line in in_file:
 	day = int(day)
 	# Convert coordinates
 	azimuth,elevation,distance = geo2local( options.lat, options.lon, options.alt, sat_x, sat_y, sat_z )
+	# Calculate range rate for last 12 minuts
+	# Would be better to take previous and next interval
+	# and take average
+	if last_distance == 0:	# Handle first line
+		last_distance = distance
+	rate = (distance-last_distance) / 720	# Fixed for 12 minute intervals
+	last_distance = distance
 	# Print results
 	if options.markdown:
-		print(date+"\t| "+time+"\t| "+str(azimuth)+"\t| "+str(elevation)+"\t| "+str(distance))
+		print(date+"\t| "+time+"\t| "+str(azimuth)+"\t| "+str(elevation)+"  \t| "+str(distance)+"\t| "+str(rate))
         elif options.csv:
-                print(date+","+time+","+str(azimuth)+","+str(elevation)+","+str(distance))
+                print(date+","+time+","+str(azimuth)+","+str(elevation)+","+str(distance)+","+str(rate))
         else:
-                print(date+"\t"+time+"\t"+str(azimuth)+"\t"+str(elevation)+"\t"+str(distance))
+                print(date+"\t"+time+"\t"+str(azimuth)+"\t"+str(elevation)+"\t"+str(distance)+"\t"+str(rate))
 

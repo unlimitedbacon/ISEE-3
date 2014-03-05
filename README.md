@@ -10,7 +10,7 @@ A long-lost, pioneering spaceship—still functional thanks only to chance and h
 
 Where do I point my satellite dish?
 -----------------------------------
-Use `geo2local.py` to convert the table of geographic coordinates from the [Satellite Situation Center](http://sscweb.gsfc.nasa.gov/tipsod/) to your local azimuth and elevation for pointing a telescope. You will need to feed it your lattitude, longitude, and altitude as well. For example...
+Use `geo2local.py` to convert the table of geographic coordinates from the [Satellite Situation Center](http://sscweb.gsfc.nasa.gov/tipsod/) to your local azimuth and elevation for pointing a telescope. The tool also gives range rate for calculating doppler shift. You will need to feed it your lattitude, longitude, and altitude. For example...
 ```
 $ ./geo2local.py --lat 33.47 --lon -81.975 --alt 0.04145 GEO.20140219-20140811.txt > Local.Augusta.20140219-20140811.txt
 ```
