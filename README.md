@@ -10,7 +10,11 @@ A long-lost, pioneering spaceship—still functional thanks only to chance and h
 
 Where do I point my satellite dish?
 -----------------------------------
-Thats what I'm trying to figure out. The scripts here are for converting the Sattelite Situation Center data to right ascension/declination. After that you can use Wolfram Alpha to get the azimuth/elevation for pointing a telescope. [This is what I've come up with so far](https://raw.github.com/unlimitedbacon/ISEE-3/master/GE.sphere-20140219-20140811.md) but I don't think its right. If you happen to live in Augusta, Georgia, then check out [this](https://raw.github.com/Sniper061/ARCA-IEEE3-ICE/master/Tipsod_ISEE-3_2014-02-18_2014-08-11_33.47N_81.975W_Augusta.txt)
+Use `geo2local.py` to convert the table of geographic coordinates from the [Satellite Situation Center](http://sscweb.gsfc.nasa.gov/tipsod/) to your local azimuth and elevation for pointing a telescope. You will need to feed it your lattitude, longitude, and altitude as well. For example...
+```
+$ ./geo2local.py --lat 33.47 --lon -81.975 --alt 0.04145 GEO.20140219-20140811.txt > Local.Augusta.20140219-20140811.txt
+```
+try `geo2local.py -h` for more options.
 
 Articles
 --------

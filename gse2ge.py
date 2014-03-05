@@ -1,3 +1,6 @@
+# THIS PROGRAM IS BROKEN
+# DON'T USE IT
+# 
 # Converts table of Geocentric Solar Ecliptic coordinates
 # to Geocentric Equatorial coordinates (J2000)
 # 
