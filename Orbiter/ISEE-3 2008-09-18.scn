@@ -1,0 +1,57 @@
+BEGIN_DESC
+A long-lost pioneering spaceship, still functional thanks only to chance and human error, is coming home for the first time in three decades. It wants to explore new worlds. But we've forgotten how to talk to it.
+
+Last known positon when the Deep Space Network made contact with the probe in 2008.
+Sep 18, 2008
+21:00 UTC
+END_DESC
+
+BEGIN_ENVIRONMENT
+  System Sol
+  Date MJD 54727.875
+END_ENVIRONMENT
+
+BEGIN_FOCUS
+  Ship ISEE-3
+END_FOCUS
+
+BEGIN_CAMERA
+  TARGET ISEE-3
+  MODE Cockpit
+  FOV 50.00
+END_CAMERA
+
+BEGIN_HUD
+  TYPE Orbit
+  REF AUTO
+END_HUD
+
+BEGIN_MFD Left
+  TYPE Orbit
+  PROJ Frame
+  FRAME Ecliptic
+  REF Sun
+  TARGET Earth
+END_MFD
+
+BEGIN_MFD Right
+  TYPE Orbit
+  PROJ Frame
+  FRAME Ecliptic
+  REF Earth
+  TARGET Moon
+END_MFD
+
+BEGIN_SHIPS
+ISEE-3:DeltaGlider
+  STATUS Orbiting Sun
+  RPOS 53865786942.79954 -59555922.25338783 -137794156169.3454
+  RVEL 28301.01594290783 -28.69189223029083 9346.156599955350
+  AROT 90 0 0
+  VROT 0 0 118.58
+  PRPLEVEL 0:0.0 1:0.0688790675
+  NOSECONE 0 0.0000
+  GEAR 0 0.0000
+  AIRLOCK 0 0.0000
+END
+END_SHIPS
