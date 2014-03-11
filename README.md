@@ -10,17 +10,30 @@ A long-lost, pioneering spaceship—still functional thanks only to chance and h
 
 Where do I point my satellite dish?
 -----------------------------------
+Ephemeris is now available from [JPL HORIZONS](http://ssd.jpl.nasa.gov/horizons.cgi), target -111.
+
+[Orbiter](http://orbit.medphys.ucl.ac.uk/) Scenarios
+----------------------------------------------------
+These are based on the JPL HORIZONS trajectory data and also accurately represent the rate of spin and remaining fuel. Take a shot at parking it at L1 or L2! There are scenarios for...
+* Last known position from DSN observations in 2008
+* Current position as of March 2014
+* Just before descending node on June 21, 2014. A plane change maneuver will be required at this point.
+* Earth encounter
+
+Scripts
+-------
 Use `geo2local.py` to convert the table of geographic coordinates from the [Satellite Situation Center](http://sscweb.gsfc.nasa.gov/tipsod/) to your local azimuth and elevation for pointing a telescope. The tool also gives range rate for calculating doppler shift. You will need to feed it your lattitude, longitude, and altitude. For example...
 ```
 $ ./geo2local.py --lat 33.47 --lon -81.975 --alt 0.04145 GEO.20140219-20140811.txt > Local.Augusta.20140219-20140811.txt
 ```
 try `geo2local.py -h` for more options.
 
-Articles
---------
-* NationalJournal Article: http://www.nationaljournal.com/tech/america-forgot-how-to-talk-to-its-zombie-spaceship-20140212
-* Planetary Society Article: http://www.planetary.org/blogs/emily-lakdawalla/2014/02070836-isee-3.html
-* Hack A Day Article: http://hackaday.com/2014/02/14/call-for-hams-and-hackers-welcome-iceisee-3-home/
+News
+----
+* 2014.03.09: [AMSAT-DL and Bochum Observatory receive signal from retired NASA spacecraft](http://www.amsat-dl.org/index.php/news-mainmenu-97/199-ice-satellite-received-in-bochum)
+* 2014.02.14: [Call for Hams and Hackers: Welcome ICE/ISEE-3 Home (Hack A Day)](http://hackaday.com/2014/02/14/call-for-hams-and-hackers-welcome-iceisee-3-home/)
+* 2014.02.12: [America Forgot How to Talk to Its Zombie Spaceship (NationalJournal)](http://www.nationaljournal.com/tech/america-forgot-how-to-talk-to-its-zombie-spaceship-20140212)
+* 2014.02.07: [ICE/ISEE-3 to return to an Earth no longer capable of speaking to it (Planetary Society)](http://www.planetary.org/blogs/emily-lakdawalla/2014/02070836-isee-3.html)
 
 Discussions
 -----------

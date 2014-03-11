@@ -1,0 +1,61 @@
+BEGIN_DESC
+A long-lost pioneering spaceship, still functional thanks only to chance and human error, is coming home for the first time in three decades. It wants to explore new worlds. But we've forgotten how to talk to it.
+
+Just before descending node, based on JPL HORIZONS predictions.
+Jun 21, 2014
+3:00:00 UTC
+
+Descending Node MJD: 
+56829.1380
+3:18:46
+END_DESC
+
+BEGIN_ENVIRONMENT
+  System Sol
+  Date MJD 56829.125
+END_ENVIRONMENT
+
+BEGIN_FOCUS
+  Ship ISEE-3
+END_FOCUS
+
+BEGIN_CAMERA
+  TARGET ISEE-3
+  MODE Cockpit
+  FOV 50.00
+END_CAMERA
+
+BEGIN_HUD
+  TYPE Orbit
+  REF AUTO
+END_HUD
+
+BEGIN_MFD Left
+  TYPE Orbit
+  PROJ Frame
+  FRAME Ecliptic
+  REF Sun
+  TARGET Earth
+END_MFD
+
+BEGIN_MFD Right
+  TYPE Orbit
+  PROJ Frame
+  FRAME Ecliptic
+  REF Earth
+  TARGET Moon
+END_MFD
+
+BEGIN_SHIPS
+ISEE-3:DeltaGlider
+  STATUS Orbiting Sun
+  RPOS -6580005122.642973 4457395.018313768 -144602628566.9467
+  RVEL 30332.93762008409 -31.17859758292235 -3003.544015828738
+  AROT 90 0 0
+  VROT 0 0 118.58
+  PRPLEVEL 0:0.0 1:0.0688790675
+  NOSECONE 0 0.0000
+  GEAR 0 0.0000
+  AIRLOCK 0 0.0000
+END
+END_SHIPS
