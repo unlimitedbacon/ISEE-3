@@ -8,8 +8,11 @@ A long-lost, pioneering spaceship—still functional thanks only to chance and h
 
 [![ISEE-3 Returns](http://img.youtube.com/vi/t2YRxdpjce0/0.jpg)](http://www.youtube.com/watch?v=t2YRxdpjce0)
 
-![Trajectory Animation](https://raw.github.com/unlimitedbacon/ISEE-3/master/trajectory.gif)
+Trajectory
+----------
 Trajectory animation from 2008-09-18 to 2014-08-11. Earth is at the origin and the sun is in the +X direction.
+
+![Trajectory Animation](https://raw.github.com/unlimitedbacon/ISEE-3/master/trajectory.gif)
 
 Where do I point my satellite dish?
 -----------------------------------
